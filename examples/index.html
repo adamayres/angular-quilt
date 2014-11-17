@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="quilt-demo">
+  <head>
+    <title>Quilt Demo</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night-eighties.min.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/styles.css">
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script src="/bower_components/angular-highlightjs/angular-highlightjs.js"></script>
+
+    <script type="text/javascript" src="/bower_components/codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+
+    <script src="/src/quilt.js"></script>
+    <script src="/src/component.js"></script>
+    <script src="/script.js"></script>
+    
+  </head>
+  <body ng-controller="exampleCtrl">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" ng-href="/">ng-quilt</a>
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: tab === 'documentation' }"><a ng-href="#/documentation">Documentation</a></li>
+            <li ng-class="{active: tab === 'examples' }"><a ng-href="#/examples">Examples</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div ng-view></div>
+  </body>
+</html>

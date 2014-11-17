@@ -1,0 +1,5 @@
+<div ng-repeat="row in quilt.rows" ng-class="rowClass(row)">
+  <div ng-repeat="column in row.columns" ng-class="columnClass(column)">
+      <ng:component ng-repeat="component in column.components" id="component.id" parameters="component.parameters"></ng:component>
+  </div>
+</div>

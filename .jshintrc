@@ -1,0 +1,18 @@
+{
+  "browser": true,
+  "node": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "indent": 2,
+  "latedef": true,
+  "maxlen": 120,
+  "newcap": true,
+  "quotmark": "single",
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "predef": [
+    "angular",
+    "-Promise"
+  ]
+}
