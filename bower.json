@@ -20,12 +20,14 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.16",
-    "angular-sanitize": "~1.2.17"
+    "angular": "~1.2.16"
   },
   "devDependencies": {
     "bootstrap": "~3.1.1",
-    "angular-route": "~1.2.17",
-    "angular-highlightjs": "~0.3.0"
+    "codemirror": "~4.7.0",
+    "angular-ui-codemirror": "~0.1.6"
+  },
+  "resolutions": {
+    "angular-ui-codemirror": "bower"
   }
 }
