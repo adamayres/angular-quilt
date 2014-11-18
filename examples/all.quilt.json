@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "id": "header",
+      "columns": [
+        {
+          "id": "header",
+          "width": 12,
+          "components": [
+            {
+              "id": "test-header"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "body",
+      "columns": [
+        {
+          "id": "main",
+          "width": 8,
+          "components": [
+            {
+              "id": "test-main",
+              "parameters": {
+                "simpleParameter": "value of parameter"
+              }
+            },
+            {
+              "id": "ng-quilt",
+              "parameters": {
+                "container": false,
+                "quilt": {
+                  "rows": [
+                    {
+                      "id": "nested-row",
+                      "columns": [
+                        {
+                          "id": "nested-column",
+                          "width": 6,
+                          "components": [
+                            {
+                              "id": "test-nested"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nested-column",
+                          "width": 6,
+                          "components": [
+                            {
+                              "id": "test-nested"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "side",
+          "width": 4,
+          "components": [
+            {
+              "id": "test-side",
+              "parameters": {
+                "complexParam": {
+                  "foo": "bar"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "columns": [
+        {
+          "id": "footer",
+          "width": 12,
+          "components": [
+            {
+              "id": "test-footer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

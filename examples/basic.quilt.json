@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "width": 12,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "Header"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "width": 8,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "Main Content"
+              }
+            }
+          ]
+        }, {
+          "width": 4,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "Side Content"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "width": 12,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "Footer"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

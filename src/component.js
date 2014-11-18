@@ -40,7 +40,8 @@ angular.module('ngComponent', []).
         id: '=',
         parameters: '=?',
         element: '=?',
-        class: '=?'
+        class: '=?',
+        decorate: '=?'
       },
       link: function ($scope, $element) {
         $scope.$watch('id', function() {
@@ -57,10 +58,8 @@ angular.module('ngComponent', []).
               componentElement = angular.element('<' + $scope.id + '>');
             }
 
-            for (var parameterName in $scope.parameters) {
+            angular.forEach($scope.parameters, function (parameterValue, parameterName) {
               if (parameterName !== 'length') {
-                var parameterValue = $scope.parameters[parameterName];
-
                 if (angular.isFunction(parameterValue) || angular.isObject(parameterValue)) {
                   // if the value is a function or object then we put in on the
                   // scope to allow the component to use it and pass by name
@@ -70,9 +69,16 @@ angular.module('ngComponent', []).
                   componentElement.attr(snakeCase(parameterName, '-'), parameterValue);
                 }
               }
+            });
+
+            if ($scope.decorate) {
+              var decorateElement = angular.element('<' + $scope.decorate.id + '>');
+              decorateElement.append(componentElement);
+              $element.append(decorateElement);
+            } else {
+              $element.append(componentElement);
             }
 
-            $element.append(componentElement);
             $compile($element.contents())($scope);
           }
         });

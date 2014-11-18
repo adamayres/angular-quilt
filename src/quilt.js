@@ -7,10 +7,10 @@ angular.module('ngQuilt', ['ngComponent'])
       return 'container';
     },
     rowClass: function (row) {
-      return 'row row-' + row.id;
+      return 'row' + (row.id ? ' ' + row.id : '');
     },
     columnClass: function (column) {
-      return 'col-md-' + column.width + ' column-' + column.id;
+      return 'col-md-' + column.width + (column.id ? ' column-' + column.id : '');
     }
   })
 
@@ -32,11 +32,13 @@ angular.module('ngQuilt', ['ngComponent'])
       link: function ($scope, $element) {
         angular.extend($scope, ngQuiltConfig);
 
-        if ($scope.quiltUrl) {
-          $http.get($scope.quiltUrl, {cache: $quiltCache}).success(function(response) {
-            $scope.quilt = response;
-          });
-        }
+        $scope.$watch('quiltUrl', function (val) {
+          if (val) {
+            $http.get($scope.quiltUrl, {cache: $quiltCache}).success(function(response) {
+              $scope.quilt = response;
+            });
+          }
+        });
 
         if ($scope.container !== false && $scope.container !== 'false') {
           $element.wrap('<div class="' + ngQuiltConfig.quiltClass() + '"></div>');

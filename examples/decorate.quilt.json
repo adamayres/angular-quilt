@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "width": 8,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "MAIN CONTENT"
+              }
+            }
+          ]
+        }, {
+          "width": 4,
+          "components": [
+            {
+              "id": "test-content",
+              "parameters": {
+                "content": "SIDE CONTENT"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "decorate": {
+    "components": {
+      "id": "test-decorator"
+    }
+  }
+}
