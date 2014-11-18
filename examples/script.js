@@ -17,15 +17,15 @@ app.controller('exampleCtrl', function ($scope) {
 
   $scope.examples = [
     {
-      url: 'examples/basic.quilt.json',
+      url: 'basic.quilt.json',
       label: 'Basic'
     },
     {
-      url: 'examples/all.quilt.json',
+      url: 'all.quilt.json',
       label: 'All Features Quilt'
     },
     {
-      url: 'examples/decorate.quilt.json',
+      url: 'decorate.quilt.json',
       label: 'Component Decorator'
     },
   ];
