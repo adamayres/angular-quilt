@@ -23,7 +23,7 @@ angular.module('ngQuilt', ['ngComponent'])
   .directive('ngQuilt', function (ngQuiltConfig, $http, $quiltCache) {
     return {
       restrict: 'EA',
-      templateUrl: '/src/quilt.tpl.html',
+      templateUrl: '/angular-quilt/src/quilt.tpl.html',
       scope: {
         quilt: '=?',
         quiltUrl: '@',
